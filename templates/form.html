@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>college admission</title>
+<link type="text/css" rel="stylesheet" href="{% static "formstyle.css" %}">
+</head>
+<body>
+<center>
+<div>
+{% for message in messages %}
+<h2><font color="black">{{message}}</font><h2>
+{% endfor %}
+</div>
+</center>
+<center>
+<div class="container">
+<form action="admission" method="post">
+{% csrf_token %}
+<div class="heading">
+<img src="{% static 'mnrlogd.jpg' %}" width="100">
+<h1 class="display-4">Student Admission Form</h1>
+<p class="lead">Fill Out The Form Carefully</p><br>
+</div><br>
+<h2 align="left">Student Details:</h2>
+<label class="h" >Enter Student Full Name:</label><input type="text" name="sname" required><br><br>
+<label class="h">Enter Father Name:</label>
+<input type="text" name="sfathername" required></td></tr> <br><br>
+<label class="h" >Date Of Birth:</label><input type="date" name="sdob" required><br><br>
+
+
+
+<label class="h">Gender:</label>
+<select required name="gender">
+<option disabled="disabled" selected="selected">select</option>
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="transgender">transgender</option>
+</select><br><br>
+
+
+
+<label class="h">Select  Group:</label>
+<select required name="degreegroup">
+<option disabled="disabled" selected="selected">Select</option>
+<option value="bcom.gen">Bcom</option>
+<option value="bcom.com">Bcom computers</option>
+<option value="bsc.sta">Bsc statistics</option>
+<option value="bsc.sic">Bsc science</option>
+<option value="bsc.phy">Bsc physics</option>
+<option value="ba">Ba</option>
+</select><br><br>
+
+
+
+<label class="h" >Aadhar Number</label>
+<input type="text" name="saadharno" required><br><br>
+<label class="h" >Enter  Mother Name:</label>
+<input type="text" name="smothername" required><br><br>
+<h2 align="left">School details:</h2>
+<label class="h" >School Name:</label>
+<input type="text" name="sschoolname" required><br><br>
+
+
+<label class="h">10th Board:</label>
+<select required name="board">
+<option disabled="disabled" selected="selected">select</option>
+<option value="ssc">SSC</option>
+<option value="cbse">CBSC</option>
+</select>
+
+<br><br>
+
+
+
+<label class="h" >10th Class Grade:</label><input type="text" name="sgrade" required><br><br>
+<h2 align="left">Intermediate Details:</h2>
+<label class="h" >college Name:</label>
+<input type="text" name="scollegename" required><br><br>
+
+
+
+<label class="h">Group</label>
+<select required name="intergroup">
+<option disabled="disabled" selected="selected">Select</option>
+<option value="mpc">MPC</option>
+<option value="mec">MEC</option>
+<option value="cec">CEC</option>
+<option value="bipc">BIPC</option>
+<option value="hec">HEC</option>
+</select><br><br>
+
+
+
+<label class="h" >Marks:</label>
+<input type="text" name="smarks" required><br><br>
+<h2 align="left">Address:</h2>
+<label class="h">Enter Present Residential Address:</label><br><br>
+<label class="h" >House Number:</labe><input type="text" name="shouseno" required>     
+<label class="h" >Colony Name:</labe><input type="text" name="scolonyname" required><br><br>
+<label class="h" >City Name:</labe><input type="text" name="scityname" required>
+<label class="h" >District Name:</labe><input type="text" name="sdistrictname" required><br><br>
+<label class="h" >Mandal Name:</labe><input type="text" name="smandalname" required><br><br>
+
+
+
+
+<label class="h">Select  Country:</label>
+<select required name="country">
+<option value="india">India</option>
+<option value="afganistan">Afghanistan</option>
+<option value="pakistan">Pakistan</option>
+<option value="bangladesh">Bangladesh</option>
+<option value="srilanka">Srilanka</option>
+<option value="nepal">Nepal</option>
+<option value="china">China</option>
+</select><br><br>
+
+
+
+<label class="h" >Enter Phone Number:</label>
+<select required name="code">
+<option value="india +91">+91</option>
+<option value="afganistan +41">+41</option>
+<option value="pakistan" +12>+12</option>
+<option value="bangladesh +45">+45</option>
+<option value="srilanka +93">+93</option>
+<option value="nepal +56">+56</option>
+<option value="china +48">+48</option>
+</select>
+
+
+<input type="phonenumber" name="sphonenumber" required><br><br>
+<label class="h">Enter Gmail:</label>
+<input type="gmail" name="sgmail"required><br><br>
+<input type="submit" value="submit">
+
+
+</form>
+</div>
+<center>
+
+
+</body>
+</html>
